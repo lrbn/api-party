@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom'
 import Github from './Github'
 import Nasa from './Nasa'
+import Pokemon from './Pokemon'
 import Homework from './Homework'
 import './App.css';
 
@@ -22,6 +23,9 @@ class App extends Component {
               <NavLink to={'/nasa'}>NASA API</NavLink>
             </li>
             <li>
+              <NavLink to={'/pokemon'}>Pokémon API</NavLink>
+            </li>
+            <li>
               <NavLink to={'/homework'}>Homework</NavLink>
             </li>
           </ul>
@@ -29,6 +33,7 @@ class App extends Component {
         <Switch>
           <Route path='/github' component={Github} />
           <Route path='/nasa' component={Nasa} />
+          <Route path='/pokemon' component={Pokemon} />
           <Route path='/homework' component={Homework} />
           <Route render={() => <p>To get started, click one of the links above</p>} />
         </Switch>
